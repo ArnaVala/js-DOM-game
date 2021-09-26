@@ -1,0 +1,22 @@
+{
+  "name": "js-dom-manipulation-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch styles/sass:styles/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnavala/js-DOM-game"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnavala/js-DOM-game/issues"
+  },
+  "homepage": "https://github.com/arnavala/js-DOM-game#readme",
+  "devDependencies": {
+    "sass": "^1.42.0"
+  }
+}
