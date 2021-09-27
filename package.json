@@ -2,7 +2,7 @@
   "name": "js-dom-manipulation-game",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.",
   "scripts": {
     "compile:sass": "sass --watch styles/scss:styles/css"
   },

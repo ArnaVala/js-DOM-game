@@ -10,6 +10,43 @@ GAME RULES:
 
 */
 
+// PRELOADER FUNCTIONS
+// preloader with counter using setInterval
+
+document.addEventListener('DOMContentLoaded', () => {
+  let counter = document.querySelector('.counter');
+  let loader = document.querySelector('.loader');
+  let preloader = document.querySelector('.preloader');
+  let count = 0; //counter starts at 0
+
+  // Counter function - percentage 
+  let counterFunction = setInterval(() => { // setInterval 
+    if (count < 101) { 
+      counter.textContent = `${count}%`; // if count is from 0-100 then display numbers and increase
+      loader.style.width = `${count}%`; //loader increase width
+      count++; //increase count
+    } else { 
+      clearInterval(counterFunction); // clearInterval() method stops the function set by setInterval()
+      fadeOut(preloader);
+    }
+  }, 30); // set time it takes from 0-100%
+
+  // FADEOUT - after loading animation 
+  function fadeOut(element) {
+    element.style.opacity = 1;
+
+    (function fade() {
+      if ((element.style.opacity -= .1) < 0) {
+        element.style.display = 'none';
+      } else {
+        requestAnimationFrame(fade);
+      }
+    })();
+  }
+})
+
+// GAME FUNCTIONS
+
 // SCOPES
 
 var scores, roundScore, activePlayer, gamePlaying, dice1, dice2, lastDice1, lastDice2, msgInfo;
