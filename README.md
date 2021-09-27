@@ -26,4 +26,4 @@ Pig Dice Game - a simple dice game with JavaScript and a page preloader with a p
 - A function to check if player has reached Winning Score each round. If they have - display WINNER. If not then call Next Players turn.
 - Reseting last dice thrown when calling next players turn.
 
-[Play game here](https://)
+[Play game here](https://av-js-dom-game.netlify.app/)
