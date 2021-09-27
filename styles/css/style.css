@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+/**********************************************
+*** VARIABLES
+**********************************************/
+/**********************************************
+*** MIXINS
+**********************************************/
+/**********************************************
+*** GENERAL
+**********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  height: 100vh;
+  width: 100%;
+  color: #675c70;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(209, 155, 253, 0.6), rgba(140, 5, 250, 0.6));
+  padding: 5rem 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  height: 70vh;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 12px 48px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.game-head {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.game-head__title {
+  font-size: 1.5rem;
+  color: #530891;
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  color: #530891;
+}
+
+/**********************************************
+*** PLAYER PANEL
+**********************************************/
+.player-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding: 5rem 0;
+}
+.player-panel__name {
+  color: #530891;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  padding-top: 2rem;
+}
+.player-panel__name::after {
+  content: "•";
+  font-size: 2.5rem;
+  margin-left: 0.5rem;
+  visibility: hidden;
+}
+.player-panel__score {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: center;
+  color: #d00135;
+}
+.player-panel__message {
+  width: 70%;
+  color: #d00135;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.player-panel__current {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6f0ac2;
+  color: #fff;
+  padding: 2rem 4rem;
+}
+.player-panel__current__label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+.player-panel__current__score {
+  font-size: 2.5rem;
+}
+
+.active {
+  background-color: #f3e7fe;
+}
+.active .player-panel__name {
+  font-weight: 300;
+}
+.active .player-panel__name::after {
+  content: "•";
+  font-size: 2.5rem;
+  margin-left: 0.5rem;
+  color: #d00135;
+  visibility: visible;
+}
+
+.game-wrapper {
+  position: absolute;
+  height: 70vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: none;
+  padding: 5rem 0;
+}
+
+.game-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.game-control__top, .game-control__middle, .game-control__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-control__middle {
+  justify-content: center;
+  height: 50%;
+}
+.game-control__finalscore {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 0.5rem;
+  margin-top: 1rem;
+  border: none;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.2);
+}
+.game-control__finalscore:focus {
+  outline: none;
+}
+
+.dice {
+  display: flex;
+  height: 100px;
+  box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.2);
+}
+
+#dice-1 {
+  margin-bottom: 1rem;
+}
+
+button {
+  background: transparent;
+  color: #530891;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  font-weight: 700;
+}
+button:hover i {
+  margin-right: 1rem;
+}
+button:focus {
+  outline: none;
+}
+button i {
+  text-align: center;
+  color: #d00135;
+  margin-top: 0;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  vertical-align: text-top;
+  transition: margin 0.3s;
+}
+
+.winner {
+  background-color: #f3e7fe;
+}
+
+.winner .player-panel__name {
+  font-size: 400;
+  color: #d00135;
+}
+
+/*# sourceMappingURL=style.css.map */
