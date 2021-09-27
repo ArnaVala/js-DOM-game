@@ -109,7 +109,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
   if (gamePlaying) { // Hold score if game is playing
     lastDice1 = 0;
     lastDice2 = 0;
-    // add CURRENT score to TOTAL score
+    // add CURRENT score to TOTAL sc
     scores[activePlayer] += roundScore;
     // Update UI - DOM
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
