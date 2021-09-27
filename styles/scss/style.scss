@@ -3,17 +3,17 @@
 /**********************************************
 *** VARIABLES
 **********************************************/
-$background: linear-gradient(
-  hsla(273, 96%, 80%, 0.6),
-  hsla(273, 96%, 50%, 0.6)
-);
-
+$white: #fff;
 $dark-gray: hsl(273, 10%, 40%);
 $purple: hsl(273, 90%, 40%);
 $light: lighten($purple, 55%);
-$pink: hsl(345, 99%, 41%);
 $dark: darken($purple, 10%);
-$white: #fff;
+$pink: hsl(345, 99%, 41%);
+
+$background: linear-gradient(
+  hsla(273, 96%, 80%, 0.6),
+  hsla(273, 90%, 40%, 0.6)
+);
 
 $font-light: 300;
 $font-regular: 400;
